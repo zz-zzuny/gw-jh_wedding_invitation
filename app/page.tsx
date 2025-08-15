@@ -1,6 +1,11 @@
 import Image from "next/image";
 import { card } from "@/data/card";
 import Gallery from "@/components/Gallery";
+import Calendar from "@/components/Calendar";
+import BottomControlBar from "@/components/BottomControlBar";
+import LovePoem from "@/components/LovePoem";
+import InviteMessage from "@/components/InviteMessage";
+import FamilyInfo from "@/components/FamilyInfo";
 import React from "react";
 //import ShareButtons from "@/components/ShareButtons";
 
@@ -10,7 +15,7 @@ export default function Page() {
   const dateStr = new Date(card.wedding.date).toLocaleString("ko-KR", { dateStyle: "long", timeStyle: "short" });
 
   return (
-    <main className="mx-auto max-w-[480px] min-h-screen bg-white text-gray-900">
+    <main className="mx-auto max-w-[480px] min-h-screen text-gray-900">
       {/* 인트로 */}
       <section className="relative">
         <Image src={card.gallery[0]} alt="cover" width={1200} height={1600} className="w-full h-auto" priority />
@@ -22,13 +27,34 @@ export default function Page() {
         </div>
       </section>
 
+      {/* 사랑의 시 */}
+      <LovePoem />
+
+      {/* 중간 이미지 */}
+      {/* <section id="editor-section-picture" data-section="editor-section-picture" className="base-section relative select-none !py-0 py-16 large SunBatang style3 bg-id-0 bgpoint1" section-id="editor-section-picture" style={{zIndex: 3}}>
+        <div data-aos="fade-up" className="section-picture-area-1 relative aos-init aos-animate">
+          <div>
+            <Image src={card.gallery[1]} alt="cover" width={1200} height={1600} className="w-full object-cover select-none pointer-events-none call-out" draggable="false" priority />
+          </div>
+        </div>
+      </section> */}
+
+      {/* 초대 메시지 */}
+      <section id="editor-section-picture" data-section="editor-section-picture" className="base-section relative select-none !py-0 py-16 large SunBatang style3 bg-id-0 bgpoint1" section-id="editor-section-picture" style={{zIndex: 3}}>
+        <div data-aos="fade-up" className="section-picture-area-1 relative aos-init aos-animate">
+          <div>
+            <Image src={card.pixcel.invite} alt="cover" width={1200} height={1600} className="w-full object-cover select-none pointer-events-none call-out" draggable="false" priority />
+          </div>
+        </div>
+      </section>
+      <InviteMessage />
+
+      {/* 가족 정보 */}
+      <FamilyInfo />
+
       {/* 예식 정보 */}
       <section className="p-6">
-        <h2 className="text-xl font-semibold mb-2">초대합니다</h2>
-        <p className="text-sm leading-6">
-          두 사람의 소중한 시작에 함께해 주시면 감사하겠습니다.
-        </p>
-        <div className="mt-4 text-sm">
+        <div className="mt-4 text-sm text-center">
           <div>{card.wedding.address}</div>
         </div>
       </section>
@@ -37,6 +63,9 @@ export default function Page() {
       <section className="p-0">
         <Gallery images={card.gallery.slice(1)} />
       </section>
+
+      {/* 캘린더 */}
+      <Calendar />
 
       {/* 오시는 길 */}
       {/* <section className="p-6">
@@ -64,6 +93,9 @@ export default function Page() {
       </section>
 
       <footer className="p-6 text-center text-xs text-gray-500">Copyright© 2025. gunwoo&juhyun All rights reserved.</footer>
+      
+      {/* 하단 고정 컨트롤 바 */}
+      <BottomControlBar />
     </main>
   );
 }
