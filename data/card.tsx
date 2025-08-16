@@ -6,9 +6,11 @@ export const card = {
         date: "2025-11-02 13:20",
         venue: "인천 부평 빌라드마리",
         address: "인천 부평구 경원대로 1404",
-        lat: 37.555, lng: 127.010,    // 대략값, 나중에 수정 가능
+        lat: 37.491078041539, lng: 126.72504536558,    // 대략값, 나중에 수정 가능
+        phone: "032-299-1004",
     },
     gallery: ["/images/IMG_2887--.jpg", "/images/IMG_2442--.jpg", "/images/IMG_3152--.jpg"],
+    video: "/images/welcome.mp4",
     accounts: {
         bride: [{ bank: "하나", name: "박주현", number: "000000-00-000000" }],
         groom: [{ bank: "신한", name: "도건우", number: "000-000-000000" }],

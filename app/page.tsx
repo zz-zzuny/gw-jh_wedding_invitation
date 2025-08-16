@@ -6,6 +6,7 @@ import BottomControlBar from "@/components/BottomControlBar";
 import LovePoem from "@/components/LovePoem";
 import InviteMessage from "@/components/InviteMessage";
 import FamilyInfo from "@/components/FamilyInfo";
+import MapSection from "@/components/MapSection";
 import React from "react";
 //import ShareButtons from "@/components/ShareButtons";
 
@@ -18,7 +19,17 @@ export default function Page() {
     <main className="mx-auto max-w-[480px] min-h-screen text-gray-900">
       {/* 인트로 */}
       <section className="relative">
-        <Image src={card.gallery[0]} alt="cover" width={1200} height={1600} className="w-full h-auto" priority />
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="w-full h-auto"
+          style={{ maxHeight: '80vh' }}
+        >
+          <source src={card.video} type="video/mp4" />
+          브라우저가 비디오를 지원하지 않습니다.
+        </video>
         <div className="absolute inset-0 flex items-end justify-center p-6 bg-gradient-to-t from-black/40 to-transparent">
           <div className="text-center text-white">
             <h1 className="text-2xl font-semibold">{card.title}</h1>
@@ -68,13 +79,7 @@ export default function Page() {
       <Calendar />
 
       {/* 오시는 길 */}
-      {/* <section className="p-6">
-        <h2 className="text-xl font-semibold mb-2">오시는 길</h2>
-        <div className="h-64 rounded-xl overflow-hidden border">
-          <KakaoMap lat={card.wedding.lat!} lng={card.wedding.lng!} />
-        </div>
-        <div className="mt-2 text-sm">{card.wedding.address}</div>
-      </section> */}
+      <MapSection />
 
       {/* 연락/계좌 */}
       <section className="p-6">
