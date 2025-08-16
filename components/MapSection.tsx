@@ -15,7 +15,7 @@ const Section = ({
       <div className="w-6 h-6 flex items-center justify-center text-gray-700">
         {icon}
       </div>
-      <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+             <h3 className="text-2xl font-semibold text-gray-800">{title}</h3>
     </div>
     <div>{children}</div>
   </div>
@@ -26,7 +26,7 @@ const Dot = ({ className = "" }: { className?: string }) => (
 );
 
 const Row = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex items-start gap-2 text-sm text-gray-700">{children}</div>
+  <div className="flex items-start gap-2 text-lg text-gray-700">{children}</div>
 );
 
 // 네이버 지도 API 타입 정의
@@ -226,12 +226,12 @@ const handleMapToggle = () => {
 return (
   <>
     <section className="p-6">
-      <h2 className="text-xl font-semibold mb-4 text-center section-title">오시는 길</h2>
+      <h2 className="text-2xl font-semibold mb-4 text-center section-title">오시는 길</h2>
 
       <div className="mb-4 text-center">
-        <p className="text-lg font-medium mb-2">{card.wedding.venue}</p>
-        <p className="text-sm text-gray-600 mb-4">{card.wedding.address}</p>
-        <p className="text-sm text-gray-600 mb-2">
+        <p className="text-base font-medium mb-2">{card.wedding.venue}</p>
+        <p className="text-base text-gray-600 mb-4">{card.wedding.address}</p>
+        <p className="text-base text-gray-600 mb-2">
           <a href={`tel:${card.wedding.phone}`} className="text-blue-600 hover:underline">
             {card.wedding.phone}
           </a>
@@ -343,7 +343,7 @@ return (
           }}
         >
           <img src="https://cdn2.makedear.com/homepage/img/icon/navermap1.webp" alt="네이버" className="w-5 h-5" />
-          네이버지도
+          <span className="text-sm">네이버지도</span>
         </button>
 
         <button
@@ -355,7 +355,7 @@ return (
           }}
         >
           <img src="https://cdn2.makedear.com/homepage/img/icon/kakaonavi1.png" alt="카카오" className="w-5 h-5" />
-          카카오내비
+          <span className="text-sm">카카오내비</span>
         </button>
 
         <button
@@ -370,7 +370,7 @@ return (
           }}
         >
           <img src="https://cdn2.makedear.com/homepage/img/icon/tmap1.png" alt="티맵" className="w-5 h-5" />
-          티맵
+          <span className="text-sm">티맵</span>
         </button>
       </div>
 
@@ -386,12 +386,12 @@ return (
               title="버스"
             >
                        <div className="space-y-3">
-              <Row><span className="text-gray-600">부평역 정류장 하차</span>&nbsp;<span className="text-gray-500">도보 2분</span></Row>
-              <div className="ml-4 space-y-2">
-                <div className="flex items-center gap-2"><Dot className="bg-green-500" /><span className="text-gray-700">지선버스: 551, 558, 561, 574, 585</span></div>
-                <div className="flex items-center gap-2"><Dot className="bg-blue-500" /><span className="text-gray-700">간선버스: 1, 11, 12, 43, 45, 47</span></div>
-                <div className="flex items-center gap-2"><Dot className="bg-purple-500" /><span className="text-gray-700">좌석버스: 302, 302B</span></div>
-                <div className="flex items-center gap-2"><Dot className="bg-cyan-500" /><span className="text-gray-700">시외버스: 88(부천), 737(수원/안산), 8414(안산), 9500(양재역)</span></div>
+                             <Row><span className="text-gray-600">부평역 정류장 하차</span>&nbsp;<span className="text-gray-500">도보 2분</span></Row>
+               <div className="ml-4 space-y-2">
+                    <div className="flex items-center gap-2"><Dot className="bg-green-500" /><span className="text-lg text-gray-700">지선버스: 551, 558, 561, 574, 585</span></div>
+                  <div className="flex items-center gap-2"><Dot className="bg-blue-500" /><span className="text-lg text-gray-700">간선버스: 1, 11, 12, 43, 45, 47</span></div>
+                  <div className="flex items-center gap-2"><Dot className="bg-purple-500" /><span className="text-lg text-gray-700">좌석버스: 302, 302B</span></div>
+                  <div className="flex items-center gap-2"><Dot className="bg-cyan-500" /><span className="text-lg text-gray-700">시외버스: 88(부천), 737(수원/안산),<br />8414(안산), 9500(양재역)</span></div>
               </div>
             </div>
          </Section>
@@ -404,15 +404,15 @@ return (
             icon={<TrainFront className="w-4 h-4" />}
             title="지하철"
           >
-                                               <div className="space-y-2">
-               <div className="flex items-center gap-2"><Dot className="bg-orange-500" />
-                 <span className="text-sm text-gray-700"><span className="font-medium">1호선</span> 부평역 하차 (부평역에서 도보 2분 거리)</span>
-               </div>
-               <div className="ml-4 text-sm text-gray-600">북부광장 출구 도보 2분 (택시 승강장 옆 우측 방향 12층 건물)</div>
-               <div className="flex items-center gap-2"><Dot className="bg-amber-700" />
-                 <span className="text-sm text-gray-700"><span className="font-medium">인천지하철</span> 부평역 하차</span>
-               </div>
-               <div className="ml-4 text-sm text-gray-600">지하상가 11번출구 → 오른편으로 보면 웨딩홀 위치</div>
+                <div className="space-y-2">
+                    <div className="flex items-center gap-2"><Dot className="bg-orange-500" />
+                      <span className="text-lg text-gray-700"><span className="font-medium">1호선</span> 부평역 하차 (부평역에서 도보 2분 거리)</span>
+                 </div>
+                 <div className="ml-4 text-lg text-gray-600">북부광장 출구 도보 2분 (택시 승강장 옆 우측 방향 12층 건물)</div>
+                 <div className="flex items-center gap-2"><Dot className="bg-amber-700" />
+                   <span className="text-lg text-gray-700"><span className="font-medium">인천지하철</span> 부평역 하차</span>
+                 </div>
+                 <div className="ml-4 text-lg text-gray-600">지하상가 11번출구 → 오른편으로 보면 웨딩홀 위치</div>
              </div>
          </Section>
 
@@ -424,8 +424,8 @@ return (
           icon={<Car className="w-4 h-4" />}
           title="자가용"
         >
-          <div className="space-y-1 text-sm text-gray-700">
-            <Row><span className="font-medium">내비게이션:</span>&nbsp;“부평역 북부광장, 빌라드마리”, “인천시 부평구 경원대로 1404” 검색</Row>
+          <div className="space-y-1 text-lg text-gray-700">
+            <Row><span className="font-medium ">내비게이션:</span>&nbsp;“부평역 북부광장, 빌라드마리”, “인천시 부평구 경원대로 1404” 검색</Row>
             <Row><span className="font-medium">서울 방향:</span>&nbsp;서울외곽순환도로 → 경인고속도로 → 부평 IC → 부평역 북부광장 방면</Row>
             <Row><span className="font-medium">인천 방향:</span>&nbsp;경인고속도로 부평 IC → 부평역 북부광장 방면</Row>
             <Row><span className="font-medium">부천 방향:</span>&nbsp;길주로(부일로) 직진 → 부평역 북부광장 방면</Row>
@@ -441,7 +441,7 @@ return (
             icon={<ParkingCircle className="w-4 h-4" />}  // ParkingSquare가 더 취향이면 바꿔도 됨
             title="주차"
           >
-          <div className="space-y-1 text-sm text-gray-700">
+          <div className="space-y-1 text-lg text-gray-700">
             <Row>
               <span>
                 자가용 이용 시{" "} 지하 2~4층, 지상주차장 (500대 동시 주차)
@@ -460,7 +460,7 @@ return (
              </svg>
              <span className="text-sm font-medium text-yellow-800">참고</span>
            </div>
-           <p className="text-sm text-yellow-700 mt-2">※ 되도록 대중교통을 이용해 주시기 바랍니다.</p>
+                       <p className="text-base text-yellow-700 mt-2">※ 되도록 대중교통을 이용해 주시기 바랍니다.</p>
          </div>
       </div>
     </section>
