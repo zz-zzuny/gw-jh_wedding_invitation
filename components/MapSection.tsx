@@ -465,6 +465,8 @@ return (
       </div>
     </section>
 
+    
+
     {/* 이미지 모달 */}
     {showImageModal && (
       <div

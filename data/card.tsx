@@ -15,6 +15,18 @@ export const card = {
         bride: [{ bank: "하나", name: "박주현", number: "000000-00-000000" }],
         groom: [{ bank: "신한", name: "도건우", number: "000-000-000000" }],
     },
+    family: {
+        groom: {
+            father: { name: "도기주", bank: "신한", number: "0123-45-6789101" },
+            mother: { name: "이인화", bank: "농협", number: "0123-45-6789102" },
+            groom: { name: "도건우", bank: "국민", number: "0123-45-6789103" }
+        },
+        bride: {
+            father: { name: "박준영", bank: "신한", number: "0123-45-6789104" },
+            mother: { name: "김정희", bank: "농협", number: "0123-45-6789105" },
+            bride: { name: "박주현", bank: "국민", number: "0123-45-6789106" }
+        }
+    },
     pixcel: {
         invite: "/images/invite-pixcel.png"
 
