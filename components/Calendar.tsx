@@ -25,7 +25,7 @@ export default function Calendar() {
     return (
         <section className="relative py-16 bg-[#fff5e9]">
             {/* 제목 */}
-            <h2 className="text-center text-2xl font-semibold pb-16 text-gray-800">
+            <h2 className="text-center text-2xl font-semibold pb-16 text-gray-800 section-title">
                 Calendar
             </h2>
             
@@ -58,18 +58,18 @@ export default function Calendar() {
                     </thead>
                     <tbody>
                         {calendarData.map((week, weekIndex) => (
-                            <tr key={weekIndex} className="border-b border-gray-200">
+                            <tr key={weekIndex} className="section-calendar-area-5">
                                 {week.map((day, dayIndex) => (
-                                    <td key={dayIndex} className="py-6">
-                                        <div className="relative flex flex-col items-center justify-center h-16">
+                                    <td key={dayIndex} className="section-calendar-area-6 pad">
+                                        <div className="section-calendar-area-7 cal-size-2 relative flex flex-col items-center justify-center">
                                             {day && (
                                                 <>
                                                 {/* 날짜 */}
                                                 <div className={`flex justify-center items-center text-base z-10 ${
                                                     day === weddingDate 
                                                     ? "text-white font-bold" 
-                                                    : dayIndex === 0 
-                                                        ? "text-red-500" 
+                                                    : dayIndex === 0 || dayIndex === 6
+                                                        ? "cal-text-holiday" 
                                                         : "text-gray-800"
                                                 }`}>
                                                     {day}
@@ -78,12 +78,16 @@ export default function Calendar() {
                                                 {/* 결혼식 날짜 하이라이트 */}
                                                 {day === weddingDate && (
                                                     <>
-                                                    {/* 배경 원 */}
-                                                    <div className="absolute w-full h-full cal-heart rounded-full"></div>
-                                                    {/* 시간 정보 */}
-                                                    <div className="absolute top-[105%] text-xs font-semibold text-pink-600 whitespace-nowrap">
-                                                        오후 1시
+                                                    {/* 하트 배경 */}
+                                                    <div className="absolute w-full h-full flex items-center justify-center">
+                                                        <svg className="w-full h-full fill-[#dab1b6]" viewBox="0 0 24 24">
+                                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                                        </svg>
                                                     </div>
+                                                    {/* 시간 정보 */}
+                                                    {/* <div className="absolute top-[105%] text-xs font-semibold text-pink-600 whitespace-nowrap">
+                                                        오후 1시
+                                                    </div> */}
                                                     </>
                                                 )}
                                                 </>

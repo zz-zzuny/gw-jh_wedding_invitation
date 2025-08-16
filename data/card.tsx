@@ -1,7 +1,7 @@
 export const card = {
     title: "도건우 ❤️ 박주현 결혼합니다.",
-    bride: "박주현",
-    groom: "도건우",
+    bride: "주현",
+    groom: "건우",
     wedding: {
         date: "2025-11-02 13:20",
         venue: "인천 부평 빌라드마리",
@@ -19,6 +19,7 @@ export const card = {
         invite: "/images/invite-pixcel.png"
 
     },
+    audio: "/audio/backgroud_music.mp3",
     contact: { bride: "010-2721-2647", groom: "010-8484-2746" },
     shareImage: "/images/IMG_2887--.jpg",
     seoDescription: "11월 2일 / 인천 부평 빌라드마리",

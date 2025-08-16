@@ -4,7 +4,7 @@ import React from "react";
 export default function InviteMessage() {
     return (
         <section className="p-6 text-center">
-            <h2 className="text-2xl font-semibold mb-8">초대합니다</h2>
+            <h2 className="text-2xl font-semibold mb-8 section-title">초대합니다</h2>
             <div className="space-y-6 text-lg leading-relaxed">
                 <p>저희 두 사람이</p>
                 <p>평생을 함께하기 위해</p>

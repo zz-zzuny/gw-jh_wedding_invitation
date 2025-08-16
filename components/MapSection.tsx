@@ -226,7 +226,7 @@ const handleMapToggle = () => {
 return (
   <>
     <section className="p-6">
-      <h2 className="text-xl font-semibold mb-4 text-center">오시는 길</h2>
+      <h2 className="text-xl font-semibold mb-4 text-center section-title">오시는 길</h2>
 
       <div className="mb-4 text-center">
         <p className="text-lg font-medium mb-2">{card.wedding.venue}</p>

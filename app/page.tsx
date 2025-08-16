@@ -2,6 +2,7 @@ import Image from "next/image";
 import { card } from "@/data/card";
 import Gallery from "@/components/Gallery";
 import Calendar from "@/components/Calendar";
+import Dday from "@/components/Dday";
 import BottomControlBar from "@/components/BottomControlBar";
 import LovePoem from "@/components/LovePoem";
 import InviteMessage from "@/components/InviteMessage";
@@ -78,6 +79,9 @@ export default function Page() {
       {/* 캘린더 */}
       <Calendar />
 
+      {/* D-day */}
+      <Dday />
+
       {/* 오시는 길 */}
       <MapSection />
 
@@ -100,7 +104,7 @@ export default function Page() {
       <footer className="p-6 text-center text-xs text-gray-500">Copyright© 2025. gunwoo&juhyun All rights reserved.</footer>
       
       {/* 하단 고정 컨트롤 바 */}
-      <BottomControlBar />
+      <BottomControlBar audioPath={card.audio} />
     </main>
   );
 }

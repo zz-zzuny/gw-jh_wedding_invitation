@@ -1,7 +1,55 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-export default function BottomControlBar() {
+export default function BottomControlBar({ audioPath }: { audioPath: string }) {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+    const [hasScrolled, setHasScrolled] = useState(false); 
+    
+    useEffect(() => {
+        let audioEl = new Audio(audioPath);
+        audioEl.loop = true;
+        setAudio(audioEl);
+    }, []);
+
+    // 이 useEffect 추가
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!hasScrolled && audio && !isPlaying) {
+                setHasScrolled(true);
+                audio.play().then(() => {
+                    setIsPlaying(true);
+                });
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [hasScrolled, audio, isPlaying]);
+
+    // 이 useEffect도 추가
+    useEffect(() => {
+        const handleUserInteraction = () => {
+            if (!hasScrolled && audio && !isPlaying) {
+                setHasScrolled(true);
+                audio.play().then(() => {
+                    setIsPlaying(true);
+                });
+            }
+        };
+
+        const events = ['touchstart', 'click', 'keydown'];
+        events.forEach(event => {
+            window.addEventListener(event, handleUserInteraction, { once: true });
+        });
+        
+        return () => {
+            events.forEach(event => {
+                window.removeEventListener(event, handleUserInteraction);
+            });
+        };
+    }, []);
+
     return (
         <div 
             className="fixed bottom-0 left-1/2 -translate-x-1/2 z-[9999] flex justify-center items-center w-[44rem] bg-white border-t border-t-[#eee] drop-shadow-2xl"
@@ -12,7 +60,17 @@ export default function BottomControlBar() {
                 <a 
                     draggable="false" 
                     className="py-[.8em] px-[1em] flex justify-center items-center cursor-pointer hover:bg-gray-50 transition-colors"
-                    onClick={() => console.log('음악 재생/정지')}
+                    onClick={() => {
+                        if (audio) {
+                            if (isPlaying) {
+                                audio.pause();
+                                setIsPlaying(false);
+                            } else {
+                                audio.play();
+                                setIsPlaying(true);
+                            }
+                        }
+                    }}
                 >
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 

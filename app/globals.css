@@ -15,17 +15,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'TmoneyRoundWindRegular';
+  src: url('https://cdn.jsdelivr.net/gh/woffz/a1@main/Tmoney/TmoneyRoundWindRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: Regular;
+}
+
 :root {
   --background: #fff5e9;
   --foreground: #171717;
-  --font-ownglyph: 'Dovemayo_gothic';
+  --font-tmoney-regular: 'TmoneyRoundWindRegular';
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-ownglyph);
-  --font-serif: var(--font-ownglyph);
+  --font-sans: var(--font-tmoney-regular);
+  --font-serif: var(--font-tmoney-regular);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,7 +45,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-ownglyph);
+  font-family: var(--font-tmoney-regular);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+h2.section-title {
+  color: #d099a1;;
 }
 
 .cal-text-holiday {
@@ -47,4 +60,87 @@ body {
 
 .cal-heart {
   background-color: #dab1b6;
+}
+
+.cal-size-2 {
+  height: 4rem;
+  width: 4rem;
+}
+
+.dday-box {
+  max-height: 6.5rem;
+  max-width: 5.8rem;
+}
+
+.dday-bg {
+  background-color: #fff2f2;
+  border-color: #efe1e1;
+}
+
+.count-text {
+  color: rgba(173, 134, 139, 1);
+}
+
+.ddayposition {
+  top:-.3rem
+}
+.medium .cal-size{
+  width:34rem
+}
+.medium .cal-size-2{
+  height:3.75rem;
+  width:3.75rem
+}
+
+.medium .pad{
+  padding:.75rem .5rem
+}
+
+.large .cal-size{
+  width:35.5rem}
+
+.large .cal-size-2{
+  height:4rem;
+  width:4rem
+}
+
+.large .pad{
+  padding:.875rem .5rem
+}
+
+.huge .cal-size{
+  width:37rem}
+
+.huge .cal-size-2{
+  height:4.25rem;
+  width:4.25rem
+}
+
+.huge .pad{
+  padding:1rem .5rem
+}
+
+.size4 .cal-size{
+  width:38.5rem
+}
+
+.size4 .cal-size-2{
+  height:4.5rem;
+  width:4.5rem
+}
+
+.size4 .pad{
+  padding:1.125rem .5rem
+}
+
+.size5 .cal-size{
+  width:40rem
+}
+
+.size5 .cal-size-2{
+  height:4.75rem;width:4.75rem
+
+}
+.size5 .pad{
+  padding:1.25rem .5rem
 }
