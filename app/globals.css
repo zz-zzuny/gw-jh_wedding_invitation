@@ -22,6 +22,16 @@
   font-style: Regular;
 }
 
+@font-face {
+  font-family: "James Stroker";
+  src: url("https://db.onlinewebfonts.com/t/58dc1ae8de513f3e2e7a53b726cab2cd.eot");
+  src: url("https://db.onlinewebfonts.com/t/58dc1ae8de513f3e2e7a53b726cab2cd.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/58dc1ae8de513f3e2e7a53b726cab2cd.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/58dc1ae8de513f3e2e7a53b726cab2cd.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/58dc1ae8de513f3e2e7a53b726cab2cd.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/58dc1ae8de513f3e2e7a53b726cab2cd.svg#James Stroker")format("svg");
+}
+
 :root {
   --background: #fff5e9;
   --foreground: #171717;

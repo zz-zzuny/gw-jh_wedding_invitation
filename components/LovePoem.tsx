@@ -3,7 +3,7 @@ import React from "react";
 
 export default function LovePoem() {
     return (
-        <section className="relative select-none py-16">
+        <section className="relative select-none py-6">
             <div className="wavebg absolute top-0 left-0 -translate-y-[96%] z-[1] w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 65" preserveAspectRatio="xMidYMid meet">
                     <g fill="#ffffff" stroke="none" transform="translate(0,65) scale(0.1,-0.1)">
@@ -15,7 +15,7 @@ export default function LovePoem() {
                     </g>
                 </svg>
             </div>
-            <div data-aos="fade-up" className="pb-16 flex justify-center">
+            {/* <div data-aos="fade-up" className="pb-16 flex justify-center">
                 <img src="https://cdn2.makedear.com/homepage/img/leaf1.png" draggable={false} className="w-[1.4em]" alt="leaf decoration" />
             </div>
             <div className="flex flex-col items-center relative overflow-hidden space-y-6 text-lg leading-relaxed">
@@ -30,7 +30,7 @@ export default function LovePoem() {
                     <p></p>
                     <p>정현주 &lt;그래도, 사랑&gt;</p>
                 </div>
-            </div>
+            </div> */}
         </section>
         
     )

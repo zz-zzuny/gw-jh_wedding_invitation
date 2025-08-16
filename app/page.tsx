@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { card } from "@/data/card";
+import Intro from "@/components/Intro";
 import Gallery from "@/components/Gallery";
 import Calendar from "@/components/Calendar";
 import Dday from "@/components/Dday";
@@ -20,7 +21,8 @@ export default function Page() {
   return (
     <main className="mx-auto max-w-[480px] min-h-screen text-gray-900">
       {/* 인트로 */}
-      <section className="relative">
+      <Intro />
+      {/* <section className="relative">
         <video 
           autoPlay 
           muted 
@@ -38,7 +40,7 @@ export default function Page() {
             <p className="mt-2">{dateStr} · {card.wedding.venue}</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 사랑의 시 */}
       <LovePoem />
@@ -53,27 +55,21 @@ export default function Page() {
       </section> */}
 
       {/* 초대 메시지 */}
-      <section id="editor-section-picture" data-section="editor-section-picture" className="base-section relative select-none !py-0 py-16 large SunBatang style3 bg-id-0 bgpoint1" section-id="editor-section-picture" style={{zIndex: 3}}>
+      {/* <section id="editor-section-picture" data-section="editor-section-picture" className="base-section relative select-none !py-0 py-16 large SunBatang style3 bg-id-0 bgpoint1" section-id="editor-section-picture" style={{zIndex: 3}}>
         <div data-aos="fade-up" className="section-picture-area-1 relative aos-init aos-animate">
           <div>
             <Image src={card.pixcel.invite} alt="cover" width={1200} height={1600} className="w-full object-cover select-none pointer-events-none call-out" draggable="false" priority />
           </div>
         </div>
-      </section>
+      </section> */}
       <InviteMessage />
 
       {/* 가족 정보 */}
       <FamilyInfo />
 
-      {/* 예식 정보 */}
-      <section className="p-6">
-        <div className="mt-4 text-sm text-center">
-          <div>{card.wedding.address}</div>
-        </div>
-      </section>
-
       {/* 갤러리 */}
       <section className="p-0">
+        <h2 className="text-xl font-semibold mb-4 text-center section-title">Gallery</h2>
         <Gallery images={card.gallery.slice(1)} />
       </section>
 
