@@ -31,7 +31,7 @@ export default function Calendar() {
             
             {/* 날짜 정보 */}
             <div className="text-center text-base font-semibold pb-4 text-gray-800">
-                <span>2025년 11월 14일 금요일 오후 1시</span>
+                <span>2025년 11월 2일 일요일 오후 1시 20분</span>
             </div>
             
             {/* 장소 */}

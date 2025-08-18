@@ -77,6 +77,10 @@ h2.section-title {
   width: 4rem;
 }
 
+.bg-pink-500 {
+  background-color: #d099a1;
+}
+
 .dday-box {
   max-height: 6.5rem;
   max-width: 5.8rem;
