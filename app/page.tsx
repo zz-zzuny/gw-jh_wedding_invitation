@@ -22,46 +22,11 @@ export default function Page() {
     <main className="mx-auto max-w-[480px] min-h-screen text-gray-900">
       {/* 인트로 */}
       <Intro />
-      {/* <section className="relative">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-auto"
-          style={{ maxHeight: '80vh' }}
-        >
-          <source src={card.video} type="video/mp4" />
-          브라우저가 비디오를 지원하지 않습니다.
-        </video>
-        <div className="absolute inset-0 flex items-end justify-center p-6 bg-gradient-to-t from-black/40 to-transparent">
-          <div className="text-center text-white">
-            <h1 className="text-2xl font-semibold">{card.title}</h1>
-            <p className="mt-2">{dateStr} · {card.wedding.venue}</p>
-          </div>
-        </div>
-      </section> */}
 
       {/* 사랑의 시 */}
       <LovePoem />
 
-      {/* 중간 이미지 */}
-      {/* <section id="editor-section-picture" data-section="editor-section-picture" className="base-section relative select-none !py-0 py-16 large SunBatang style3 bg-id-0 bgpoint1" section-id="editor-section-picture" style={{zIndex: 3}}>
-        <div data-aos="fade-up" className="section-picture-area-1 relative aos-init aos-animate">
-          <div>
-            <Image src={card.gallery[1]} alt="cover" width={1200} height={1600} className="w-full object-cover select-none pointer-events-none call-out" draggable="false" priority />
-          </div>
-        </div>
-      </section> */}
-
       {/* 초대 메시지 */}
-      {/* <section id="editor-section-picture" data-section="editor-section-picture" className="base-section relative select-none !py-0 py-16 large SunBatang style3 bg-id-0 bgpoint1" section-id="editor-section-picture" style={{zIndex: 3}}>
-        <div data-aos="fade-up" className="section-picture-area-1 relative aos-init aos-animate">
-          <div>
-            <Image src={card.pixcel.invite} alt="cover" width={1200} height={1600} className="w-full object-cover select-none pointer-events-none call-out" draggable="false" priority />
-          </div>
-        </div>
-      </section> */}
       <InviteMessage />
 
       {/* 가족 정보 */}
