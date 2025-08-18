@@ -1,10 +1,17 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 export default function Gallery({ images }: { images: string[] }) {
     const [activeIndex, setActiveIndex] = useState(0);
+    const swiperRef = useRef<any>(null);
+
+    const handleDotClick = (index: number) => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slideTo(index);
+        }
+    };
 
     return (
         <div className="relative">
@@ -17,6 +24,7 @@ export default function Gallery({ images }: { images: string[] }) {
             </div>
 
             <Swiper 
+                ref={swiperRef}
                 spaceBetween={16} 
                 slidesPerView={1} 
                 centeredSlides={false}
@@ -38,11 +46,13 @@ export default function Gallery({ images }: { images: string[] }) {
             {/* 페이지네이션 점들 */}
             <div className="flex justify-center mt-4 space-x-2">
                 {images.map((_, index) => (
-                    <div
+                    <button
                         key={index}
-                        className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                            index === activeIndex ? 'bg-pink-400' : 'bg-gray-300'
+                        onClick={() => handleDotClick(index)}
+                        className={`w-2 h-2 rounded-full transition-colors duration-300 cursor-pointer hover:scale-110 ${
+                            index === activeIndex ? 'bg-[#d099a1]' : 'bg-gray-300'
                         }`}
+                        aria-label={`${index + 1}번째 이미지로 이동`}
                     />
                 ))}
             </div>
