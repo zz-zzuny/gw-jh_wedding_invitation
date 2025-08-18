@@ -34,7 +34,7 @@ export default function Page() {
 
       {/* 갤러리 */}
       <section className="p-0">
-        <h2 className="text-xl font-semibold mb-4 text-center section-title">Gallery</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center section-title">Gallery</h2>
         <Gallery images={card.gallery.slice(1)} />
       </section>
 

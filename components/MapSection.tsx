@@ -225,7 +225,7 @@ export default function MapSection() {
 
   return (
     <>
-      <section className="p-6">
+      <section className="py-6">
         <h2 className="text-2xl font-semibold mb-4 text-center section-title">오시는 길</h2>
 
         <div className="mb-4 text-center">
@@ -457,14 +457,14 @@ export default function MapSection() {
             icon={<ParkingCircle className="w-10 h-10" />}  // ParkingSquare가 더 취향이면 바꿔도 됨
             title="주차"
           >
-            <div className="space-y-1 text-lg text-gray-700">
-              <Row>
-                <span>
-                  자가용 이용 시{" "} 지하 2~4층, 지상주차장 (500대 동시 주차)
-                  <span className="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded">무료주차 2시간</span>
-                </span>
-              </Row>
-              <Row>양가 혼주 카운터에서 주차 등록 후 출차</Row>
+            <div className="ml-4 space-y-2">
+              <div className="flex items-center gap-2"><Dot className="bg-pink-500" />
+                <span className="text-lg text-gray-700"><span className="font-medium">자가용 이용 시 건물 지하 2~4층, 지상주차장</span></span>
+              </div>
+              <div className="ml-4 text-lg text-gray-600">(500대 동시 주차) <span className="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded">무료 주차 2시간</span></div>
+              <div className="flex items-center gap-2"><Dot className="bg-pink-500" />
+                <span className="text-lg text-gray-700"><span className="font-medium">양가 혼주 카운터에서 주차 등록 후 출차</span></span>
+              </div>
             </div>
           </Section>
 

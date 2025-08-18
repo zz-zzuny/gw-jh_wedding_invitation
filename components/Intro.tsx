@@ -35,7 +35,7 @@ export default function Intro() {
                         </div>
                         
                         {/* 신랑신부 이름과 날짜 - 비디오 바로 아래 */}
-                        <div className="text-center" style={{ zIndex: 2 }}>
+                        <div className="text-center w-full" style={{ zIndex: 2 }}>
                             <div className="flex items-center w-full" style={{ fontSize: '18px', lineHeight: '1.4em', padding: '0 2rem 2rem 2rem' }}>
                                 <div className="w-full text-left break-all whitespace-break-spaces" style={{ letterSpacing: '0.1em' }}><span style={{ color: '#d099a1' }}>도건우</span></div>
                                 <div className="w-full text-center break-all whitespace-break-spaces"><span style={{ color: '#d099a1' }}>2025. 11. 02.</span></div>
