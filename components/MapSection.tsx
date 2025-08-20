@@ -44,7 +44,7 @@ const DEST = {
 };
 
 const encodedName = encodeURIComponent(DEST.name);
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 function openUrlWithFallback(url: string, fallback?: string) {
   if (!isMobile) {
